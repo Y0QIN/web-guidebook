@@ -586,9 +586,13 @@ Vue.component('some-comp', {
 
 ```js
 // bad
-{{ fullName.split(' ').map(function (word) {
-    return word[0].toUpperCase() + word.slice(1)
-  }).join(' ')}}
+{
+  { 
+    fullName.split(' ').map(function (word) {
+      return word[0].toUpperCase() + word.slice(1)
+    }).join(' ')
+  }
+ }
 
 //  good
 //  在模板中
