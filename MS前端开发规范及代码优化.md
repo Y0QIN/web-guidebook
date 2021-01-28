@@ -586,15 +586,13 @@ Vue.component('some-comp', {
 
 ```js
 // bad
-{{
-  fullName.split(' ').map(function (word) {
+{{ fullName.split(' ').map(function (word) {
     return word[0].toUpperCase() + word.slice(1)
-  }).join(' ')
-}
+  }).join(' ')}}
 
 //  good
 //  在模板中
-{{ normalizedFullName }
+{{ normalizedFullName }}
 // 复杂表达式已经移入一个计算属性
 computed: {
   normalizedFullName: function () {
